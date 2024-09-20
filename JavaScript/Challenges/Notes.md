@@ -48,3 +48,9 @@
 
     console.log(jonas.calAge())
     ```
+## Section 8: How JavaScript Works Behind the Scenes
+- ***High-level***(Devs does not have to worry, everityng happens automatically), Object-Oriented, ***Multi-paradigm*** (OOP,Procedural(Using so far),Functional etc), ***Garbage-Collecter***(automatic admin the storage), ***First-class functions***(treated as variables),
+- JIT(Just-in-time compilation) 
+- Execution context
+    - Compilation ➡️ Creation of GEC(***Global execution context***) ➡️ Execution of ***top-level code***(inside global EC)➡️ execution ***functions*** and waiting for ***callbacks***
+

@@ -1,27 +1,26 @@
-// Implement a game rest functionality, so that the player can make a new guess!
-// Your tasks:
-// 1. Select the element with the 'again' class and attach a click event handler
-// 2. In the handler function, restore initial values of the 'score' and 
-// 'secretNumber' variables
-// 3. Restore the initial conditions of the message, number, score and guess input 
-// fields
-// 4. Also restore the original background color (#222) and number width (15rem)
-'use strict'
+"use strict";
 
-const modal = document.querySelector('.modal')
-const overlay = document.querySelector('.overlay')
-const btnClose = document.querySelector('.close-modal')
-const btnOpen = document.querySelectorAll('.show-modal')
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const btnClose = document.querySelector(".close-modal");
+const btnOpen = document.querySelectorAll(".show-modal");
 
-for (let i = 0; i < btnOpen.length; i++){
-    btnOpen[i].addEventListener('click', function(){
-        modal.classList.remove('hidden')    
-        overlay.classList.remove('hidden')
-    })
+const openMod = function () {
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+};
+const closeMod = function () {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+for (let i = 0; i < btnOpen.length; i++) {
+  btnOpen[i].addEventListener("click", openMod);
 }
+btnClose.addEventListener("click", closeMod);
+overlay.addEventListener("click", closeMod);
 
-btnClose.addEventListener('click' ,function(){
-    modal.classList.add('hiden')
-    overlay.classList.add('hidden')
-})
-    
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+    closeMod();
+  }
+});
