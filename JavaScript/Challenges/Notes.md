@@ -144,3 +144,104 @@
     - Reference Types (stored in the HEAP() )
       - Objects (Object literal , Arrays , Functions , Many more)
 
+## Section 9: Data Structures, Modern Operators and Strings
+- In arrays, values are accessed based on their position (index).
+
+  In objects, values are accessed based on the property names.
+- Destructing Arrays (break a complex data strucutre)
+    ```
+    const numbers = [1, 2, 3, 4, 5];
+
+    // Array destructuring
+    const [a, b, c] = numbers;
+
+    // Destructuring while skipping the second element
+    const [first, , third] = numbers;
+
+    // Destructuring with the rest operator
+    const [fruit1, fruit2, ...otherFruits] = fruits;
+
+    //Destructuring in Functions
+    function displayData([name, age]) {
+    console.log(`Name: ${name}, Age: ${age}`);
+    }
+
+    const data = ['John', 30];
+    displayData(data); // Output: Name: John, Age: 30
+
+    //Destructuring with Default Values
+    const numbers2 = [1];
+
+    const [x, y = 10] = numbers2;
+    ```
+- Destructing Objects 
+    ```
+    const person = {
+    name: 'John',
+    age: 30,
+    city: 'Madrid'
+    };
+
+    // Object destructuring
+    const { name, age, city } = person;
+
+    // Destructuring with different variable names
+    const { name: nameMake, age: ageModel } = person;
+
+    // Destructuring with default values
+    const { title, author, publicationYear = 1967 } = book;
+    
+    // Nested destructuring
+    const user = {
+        name: 'Laura',
+        info: {
+            age: 28,
+            address: {
+                city: 'Barcelona',
+                country: 'Spain'
+            }
+        }
+    };
+    const { name, info: { age, address: { city, country } } } = user;
+
+    //Function destructuring
+    function displayDetails({ name, age }) {
+    console.log(`Name: ${name}, Age: ${age}`);
+    }
+
+    const person2 = {
+        name: 'Carlos',
+        age: 25,
+        city: 'Valencia'
+    };
+    ```
+- Spread Operator **(...)**
+    - ```
+        const arr = [7,8,9]
+        const newArr = [1,2, ...arr] ➡️ save values of the array
+      ```
+- Rest Pattern and Parameters
+    - Rest Pattern is the opposite to the spread operator
+
+    Collect multiples elements and condense them into an array and i usted LEFT to the ' = '
+    ```
+    const arr = [a,b, ...others] = [1,2,3,4,5] ➡️ save values into an array
+    ```
+- Nullish Coalescing Operator ***??***
+    - returns the left-hand operand if it is not null or undefined; otherwise, it returns the right-hand operand.
+    ```
+    const a = null;
+    const b = 5;
+    const c = a ?? b;
+
+    console.log(c); // Output: 5
+    ```
+- For-of loop
+    ```
+    arr
+
+    for (const item of arr){item}
+    ```
+    - .entries() ➡️ returns an array of a given object's own enumerable string-keyed property key-value pairs
+    
+      
