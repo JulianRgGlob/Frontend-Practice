@@ -243,5 +243,48 @@
     for (const item of arr){item}
     ```
     - .entries() ➡️ returns an array of a given object's own enumerable string-keyed property key-value pairs
+
+- Optional Chaining (***?***)
+    - If a property does not exist or is null/undefined, the expression short-circuits and evaluates to undefined instead of throwing an error
+    ```
+    console.log(arr.item.sun?.moon)
+    ```  
+- Object Keys, Values, Entries
+    - Object Keys
+    ```
+    Object.keys
+    ```
+    - Object Values
+    ```
+    Object.values()
+    ```
+    - Object Entries mix Keys and Values
+    ```
+    Object.entries()
+    for(const [key, {value1,value2}] if entries){}
+    ```
+- sets //unique, dont repear elements
+    ```
+    const name = new Set([])
+    ```
+    - .size , .has() ➡️ includes element in array , .add() , .delete() , clear()
+
+- maps //keys and values but we can have any type of key
+    ```
+    const name = new Map([])
+    ```
+    - .set('**key**','**value**') , .get(**key**)
+    - convert objects to maps
+    ```
+    const name = new Map(Object.entries(nameObject))
+    ```
+    - convert maps to array
+    ```
+    ...map
+    ```
+- Strings
+    - indexOF('string') , lastIndexOf('string)
+    - slice(beginParameter,endParameter) // we can use negative parameter, and begin in the end
+    - 
     
       
