@@ -283,8 +283,60 @@
     ...map
     ```
 - Strings
-    - indexOF('string') , lastIndexOf('string)
-    - slice(beginParameter,endParameter) // we can use negative parameter, and begin in the end
-    - 
-    
-      
+    - .indexOF('string') , .lastIndexOf('string)
+    - .slice(beginParameter,endParameter) // we can use negative parameter, and begin in the end
+    - .trim() ➡️ delete spaces
+    - .replace('value1','valueReplace')
+    - Regex //g ➡️Global
+    - .includes('word') ➡️ return boolean
+    - .startsWith('word) .endsWith('word) ➡️ return boolean
+    - .split(' ') ➡️ split in an array
+    - .join(' ') 
+    - .padStart(numberCharacters, ' ') ➡️ in the begind ' ' .padEnd(numberCharacters, ' ')
+    - .repeat(numberRepet)
+
+## Section 10: A Closer Look at Functions
+- Functions returning functions
+    -
+    ```
+    const greet = function(greeting){
+        return function(name){
+            console.log(`${greeting}${name}`)
+        }
+    }
+    const greeterHey = greet('hey)
+    greeterHey('Julian') // Hey Julian
+    greeterHey('Andres') // Hey Andres
+
+    or
+
+    greet('Hello')('Julian') // Hello Julian
+
+    greetArr = greeting => name => onsole.log(`${greeting}${name}`)
+    greetArr('Hi')('Andres') // Hi Andres
+    ``` 
+- call Methods
+    -
+    ```
+    method.call()
+    ```
+- Apply Methods
+    -
+    ```
+    method.apply() // dont use use (...method)
+    ```
+- Bind Method
+    -
+    ```
+    const obj = {
+        name: 'Alice',
+        greet: function(greeting) {
+            console.log(`${greeting}, ${this.name}!`);
+        }
+    };
+
+    const greetAlice = obj.greet.bind(obj);
+    greetAlice('Hello'); // Salida: "Hello, Alice!"
+    ```
+
+
