@@ -338,5 +338,20 @@
     const greetAlice = obj.greet.bind(obj);
     greetAlice('Hello'); // Salida: "Hello, Alice!"
     ```
+- Immediately Invoked Function Expression
+    -
+    ```
+    (function(){
+
+    })()
+    -----------
+    (()=> return)
+    ```
+## Section 11: Working with Arrays
+
+- splice() -> extracted the part that its slice
+- reverse()
+
+
 
 
